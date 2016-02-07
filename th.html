@@ -6,9 +6,26 @@
   <h1>Yo. Welcome to Meteor!</h1>
 
   {{> hello}}
+  
+    <div class="container">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+ 
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+
+  </div>
 </body>
 
 <template name="hello">
   <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  <p>You've pressed the button {{counter}} times. {{trail_name}}</p>
+</template>
+
+<template name="task">
+  <li>{{text}}</li>
 </template>
