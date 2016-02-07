@@ -1,7 +1,8 @@
-Tasks = new Mongo.Collection("tasks");
-Trails = new Mongo.Collection("Trails");
+
 
 if (Meteor.isClient) {
+  Tasks = new Mongo.Collection("tasks");
+Trails = new Mongo.Collection("Trails");
   // counter starts at 0
   Session.setDefault('counter', 0);
 
