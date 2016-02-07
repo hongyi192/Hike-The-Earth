@@ -1,4 +1,5 @@
 Tasks = new Mongo.Collection("tasks");
+Trails = new Mongo.Collection("Trails");
 
 if (Meteor.isClient) {
   // counter starts at 0
@@ -8,10 +9,17 @@ if (Meteor.isClient) {
     counter: function () {
       return Session.get('counter');
   }});
-  Template.body.helpers({
+
+  Template.task.helpers({
     tasks: function() {
 		return Tasks.find({});
 	}
+  });
+
+  Template.trails.helpers({
+    trails: function() {
+    return Trails.find({});
+  }
   });
 
   Template.hello.events({

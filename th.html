@@ -18,14 +18,29 @@
       {{/each}}
     </ul>
 
+    <div id="trails-info">
+
+        {{> trails}}
+
+    </div>
+
   </div>
 </body>
 
 <template name="hello">
   <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times. {{trail_name}}</p>
+  <p>You've pressed the button {{counter}} times.</p>
 </template>
 
 <template name="task">
   <li>{{text}}</li>
+</template>
+
+<template name="trails">
+  <ul>
+  {{#each trails}}
+    <li>{{trail_name}}</li>
+    <li>{{country}}</li>
+  {{/each}}
+  </ul>
 </template>
