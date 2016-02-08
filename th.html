@@ -1,57 +1,36 @@
 <head>
   <title>Top Hikes</title>
+
+
 </head>
 
 <body>
-  <h1>Yo. Welcome to Meteor!</h1>
 
-  {{> hello}}
-  
-    <div class="container">
-    <header>
-      <h1>Todo List</h1>
-    </header>
- 
-    <ul>
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
-    </ul>
+  {{> paralla}}
 
-    <div id="trails-info">
-
-        {{> trails}}
-
-    </div>
-
+  <div id="trails-info">
+      {{> trails}}
   </div>
 
   <div class="row">
     <div class="col s6 m3">
       <div class="card">
         <div class="card-image">
-          <img src="/images/inca-trail.jpeg">
+          <img src="/inca-trail.jpeg">
           <span class="card-title">Inca Trail</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+          <p>Trek to Manchu Picchu</p>
         </div>
       </div>
     </div>
   </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
-<template name="task">
-  <li>{{text}}</li>
+<template name="paralla">
+    <div class="parallax-container">
+    <div class="parallax"><img src="/front-page.jpeg"></div>
+  </div>
 </template>
 
 <template name="trails">
