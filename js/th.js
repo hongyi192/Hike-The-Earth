@@ -1,34 +1,15 @@
 
-
-if (Meteor.isClient) {
   Tasks = new Mongo.Collection("tasks");
-Trails = new Mongo.Collection("Trails");
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+  Trails = new Mongo.Collection("Trails");
+if (Meteor.isClient) {
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-  }});
 
-  Template.task.helpers({
-    tasks: function() {
-		return Tasks.find({});
-	}
-  });
-
-  Template.trails.helpers({
+  Template.trails_template.helpers({
     trails: function() {
-    return Trails.find({});
+    return Trails.find();
   }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
 }
 
 if (Meteor.isServer) {
