@@ -3,6 +3,10 @@
   Trails = new Mongo.Collection("Trails");
 if (Meteor.isClient) {
 
+Template.trails_template.onRendered(function(){
+//do your jquery business here!
+$(".parallax").parallax()
+});
 
   Template.trails_template.helpers({
     trails: function() {
