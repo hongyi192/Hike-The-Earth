@@ -7,10 +7,10 @@ nav {
 
 .website-title {
 	margin-left: 2%;
-	margin-top: 28%;
+	margin-right: 2%;
+	margin-top: 30%;
 	color: white;
-
-	vertical-align: middle;
+	text-align: right;
 }
 
 .website-title-container { 	
