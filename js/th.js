@@ -1,4 +1,8 @@
-
+  Router.route('/', {
+	  name: 'home',
+	  template: 'trails_template'
+  });
+  
   Tasks = new Mongo.Collection("tasks");
   Trails = new Mongo.Collection("Trails");
 if (Meteor.isClient) {

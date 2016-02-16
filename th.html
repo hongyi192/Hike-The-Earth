@@ -6,25 +6,9 @@
 
 <body>
 
-
 {{> paralla}}
-  <div id="trails-info">
-      {{> trails_template}}
-  </div>
 
-  <div class="row">
-    <div class="col s6 m3">
-      <div class="card">
-        <div class="card-image">
-          <img src="/inca-trail.jpg">
-          <span class="card-title">Inca Trail</span>
-        </div>
-        <div class="card-content">
-          <p>Trek to Manchu Picchu</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </body>
 
 <template name="paralla">
@@ -37,10 +21,24 @@
 </template>
 
 <template name="trails_template">
+  <div class="row">
   <ul>
   {{#each trails}}
-    <li>{{trail_name}}</li>
-    <li>{{country}}</li>
+    <!-- The default property of row has 12 columns. s3 means the object will take the space of 3 columns -->
+    <div class="col s3">
+      <div class="card">
+        <div class="card-image">
+          <img src="/inca-trail.jpg">
+          <span class="card-title">{{trail_name}}</span>
+        </div>
+        <div class="card-content">
+		  <a href="{{pathFor route='test_page'}}">Test Page: Trek to {{country}}</a>
+        </div>
+      </div>
+    </div>
   {{/each}}
   </ul>
+  </div>
 </template>
+
+
