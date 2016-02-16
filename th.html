@@ -8,7 +8,6 @@
 
 {{> paralla}}
 
-
 </body>
 
 <template name="paralla">
@@ -24,15 +23,14 @@
   <div class="row">
   <ul>
   {{#each trails}}
-    <!-- The default property of row has 12 columns. s3 means the object will take the space of 3 columns -->
     <div class="col s3">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
-          <img src="/inca-trail.jpg">
+          <img class="card-img" src="{{icon_file_name}}">
           <span class="card-title">{{trail_name}}</span>
         </div>
         <div class="card-content">
-		  <a href="{{pathFor route='test_page'}}">Test Page: Trek to {{country}}</a>
+          <a href="{{pathFor route='test_page'}}">Test Page: Trek to {{country}}</a> 
         </div>
       </div>
     </div>
